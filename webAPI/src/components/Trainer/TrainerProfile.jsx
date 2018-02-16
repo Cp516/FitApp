@@ -6,7 +6,11 @@ import ChangeUser from '../../actions/example.jsx'
 import SetBackground from '../../actions/backgroundImage.jsx'
 import SetProfile from '../../actions/profileImage.jsx'
 import axios from 'axios'
+<<<<<<< HEAD
 import { Dropdown, Grid, Label, Item, Image, Menu, Segment, Form,Icon, Button, Header, Modal } from 'semantic-ui-react'
+=======
+import { Dropdown, Grid, Item, Image, Menu, Segment, Form,Icon, Button, Header, Modal } from 'semantic-ui-react'
+>>>>>>> um
 
 class TrainerProfile extends React.Component{
   constructor(props){
@@ -172,7 +176,6 @@ render() {
 <div className='container' style={{justifyConetent:'center'}}>
   <img src={this.state.ProfileImage} style={{maxWidth: 250, maxHeight:250, display: 'block', margin:'0 auto'}} />
 </div> */}
-
 
 const mapStoreToProps = (store) => {
   console.log('TrainerProfileStore', store);
