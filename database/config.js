@@ -1,10 +1,10 @@
 var knex = require('knex')({
 	client: 'mysql',
 	connection: {
-		host: 'turba-aenean.ccl2ixzx9sdm.us-east-2.rds.amazonaws.com',
-		user: 'aenean',
-		password: 'hrnyc12aenean',
-		database: 'fitapp',
+		host: 'fit-app.csunnfgridaf.us-east-1.rds.amazonaws.com',
+		user: 'Fit_App',
+		password: 'AmazonWS',
+		database: 'Fit_App',
 		charset: 'utf8'
 	}
 });

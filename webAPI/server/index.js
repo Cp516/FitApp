@@ -26,7 +26,6 @@ app.use(cors({
 	]
 }))
 
-
 app.use('/graphql', cors(), graphqlHTTP({
 	schema: graphqltools.makeExecutableSchema({typeDefs: graphQLSchema, resolvers: resolvers}),
 	graphiql: true,
@@ -47,32 +46,10 @@ app.use('/graphiql', graphiqlExpress({
 //   historyApiFallback: true,
 // }));
 
-// var firebaseDb = admin.initializeApp({
-//     credential: admin.credential.cert(serviceAccount),
-//     databaseURL: TOKEN.firebaseConfig.databaseURL
-// });
-
-// var database = firebaseDb.database();
-
 // app.use('/graphql', graphqlHTTP({
 // 	schema: graphqltools.makeExecutableSchema({typeDefs: graphQLSchema, resolvers: resolvers}),
 // 	graphiql: true,
 // 	context: collections
 // }));
 
-// function pushMessge(roomId, message){ //ADD THIS MESSAGE TO THIS ROOM
-//     database.ref('/rooms/' + roomId + '/messages').push(message)
-// }
-
-// function roomsListenerSetup(roomsArray){ //ADDS EVENTLISTENER FOR NEW MESSAGES TO THESE ROOMS
-//     roomsArray.map((roomId)=>{
-//         database.ref('/rooms/' + roomId + '/messages').on("value", function(snapshot){
-//             console.log(snapshot.val());
-//         }, 
-//         function(errorObject){
-//             console.log("the read failed: " + errorObject.code);
-//         })
-//     })
-// }
-    
 app.listen(port, () => console.log('Listening on port', port));
